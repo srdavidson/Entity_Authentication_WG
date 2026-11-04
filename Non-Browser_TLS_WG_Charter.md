@@ -52,7 +52,7 @@ The following are out of scope for the TLSWG:
 * The design of authentication protocols, which is the responsibility of the IETF and other standards bodies.
 * Root program policy, inclusion criteria, and trust store operation, which remain matters for the operators of those programs.
 
-1. **Summary of Work**
+2. **Summary of Work**
 
    2.1 **Guidelines**
 
@@ -90,7 +90,7 @@ The initial milestones are as follows. Such milestones may be modified or replac
 4. Agreement of the validation requirements for each supported identifier type.
 5. First complete Draft Guideline circulated for Working Group review.
 
-6. **Membership**
+3. **Membership**
 
    3.1 **Membership Criteria**
 
@@ -169,7 +169,7 @@ Applicants shall supply the information set out in Section 3.1(b) and follow the
 
 Existing CA/Browser Forum Members seeking to participate in the TLSWG, in accordance with Bylaw 5.3.1(c), MUST formally declare their intent to participate in writing and provide the TLSWG Chair with this declaration and evidence that they meet the criteria set forth above. Such Applicants SHALL become Members of the TLSWG as determined by consensus during a TLSWG Meeting or Teleconference, or upon the request of any Member of the TLSWG, by a Ballot among Members of the TLSWG.
 
-1. **Dependencies and Liaisons**
+4. **Dependencies and Liaisons**
 
    4.1 **CAB Forum Groups**
 
