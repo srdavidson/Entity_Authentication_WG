@@ -68,7 +68,7 @@ Final Guidelines:
 * **Baseline Requirements for the Issuance and Management of Non-Browser TLS Certificates**, addressing at a minimum:
   * the identifiers that may be asserted as the Subject of a non-browser TLS certificate, and the methods by which a CA verifies the Applicant's control of, or entitlement to, each such identifier;
   * certificate profiles for Subscriber certificates, Issuing CA certificates, and Root CA certificates, including which extensions are required, permitted, and prohibited;
-  * key management, certificate lifecycle, validity periods, and revocation and status services, taking account of relying party behaviour in client authentication;
+  * key management, certificate lifecycle, validity periods, and revocation and status services, taking account of relying party behaviour in TLS authentication;
   * CA operational practices, physical and logical security, incident response, and disclosure, subject to coordination with other Forum CWGs to ensure consistency and avoid redundancy.
 
    2.2 **Other Deliverables**
@@ -144,7 +144,7 @@ Members may resign from the Working Group at any time. Resignation does not prev
 (a) Certificate Consumer: A Certificate Consumer Member's membership may be suspended if any of the following become true:
 
    * it stops providing support for its qualifying product or service;
-   * its qualifying product or service ceases to authenticate remote parties using Certificates asserting `id-kp-clientAuth`;
+   * its qualifying product or service ceases to authenticate remote parties using Certificates asserting `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth`;
    * it ceases to maintain or publish a conforming non-browser TLS Trust Program, or that program ceases to accept any CA with which the Member is not Affiliated;
    * its trust decisions cease to be made independently within the meaning of Section 3.1.
 
@@ -152,13 +152,13 @@ Members may resign from the Working Group at any time. Resignation does not prev
 
    * it fails to perform and disclose its membership-qualifying audit and fifteen (15) months have elapsed since the end of the audit period of its last successful qualifying audit;
    * its qualifying audit is revoked, rescinded or withdrawn;
-   * it ceases to issue Certificates asserting `id-kp-clientAuth`, or those Certificates cease to be accepted under any Certificate Consumer Member's non-browser TLS Trust Program.
+   * it ceases to issue Certificates asserting `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth`.
 
 Any Voting Member who believes any of the above circumstances is true of any other Voting Member, that Voting Member may report it on the Working Group Public Mail List. The Working Group Chair will then investigate, including asking the reported Voting Member for an explanation or appropriate documentation. If evidence of continued qualification for membership is not forthcoming from the reported Voting Member within five (5) working days, the Working Group Chair will announce that such Voting Member is suspended and has become a Probationary Member, such announcement to include the clause(s) from the above list under which the suspension has been made.
 
 A Probationary Member who believes it has now re-met the membership criteria under the relevant clauses shall post evidence to the Working Group Public Mail List. The Working Group Chair will examine the evidence, and if appropriate, reinstate the member to voting status, by public announcement.
 
-Where the Chair's determination is disputed by the affected Member or by any other Member, the question SHALL be decided by ballot of the Working Group under Section 7.
+Where the Chair's determination is disputed by the affected Member or by any other Member, the question SHALL be decided by ballot of the TLSWG under Section 7.
 
 A Probationary Member may participate in this Working Group and Forum Meetings, Teleconferences, and on this Working Group and the Forum's discussion lists as set forth in the Bylaws.
 
