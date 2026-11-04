@@ -18,9 +18,9 @@ The **mission** of the Non-Browser TLS Certificate Working Group (the "TLSWG") i
 
    1.1 **Summary of Working Group Goals and Objectives**
 
-Client authentication using X.509 certificates is long established in enterprise and bilateral deployments, where the relying party configures its own trust anchors and validation rules. It is comparatively undefined where the relying party and the Subscriber are unaffiliated and no such bilateral arrangement is practical, and where the relying party therefore depends on a certificate issued by a third party CA under a shared trust anchor.
+Authentication using X.509 certificates is long established in enterprise and bilateral deployments, where the relying party configures its own trust anchors and validation rules. It is comparatively undefined where the relying party and the Subscriber are unaffiliated and no such bilateral arrangement is practical, and where the relying party therefore depends on a certificate issued by a third party CA under a shared trust anchor.
 
-Until recently, this gap was partly obscured because certificates issued under the TLS Baseline Requirements commonly asserted both `id-kp-serverAuth` and `id-kp-clientAuth`. Ballot SC-081v3 and the corresponding root program policies are removing that entanglement in favour of single-purpose hierarchies. That direction is not revisited by this Charter. Its consequence, however, is that certificates used for client authentication between unaffiliated parties will be issued outside any Forum guideline, with no agreed validation practices, no certificate profile, and no audit scheme addressed to their particular risks.
+Until recently, this gap was partly obscured because certificates issued under the TLS Baseline Requirements commonly asserted both `id-kp-serverAuth` and `id-kp-clientAuth`. Ballot SC-081v3 and the corresponding root program policies are removing that entanglement in favour of single-purpose hierarchies. That direction is not revisited by this Charter. Its consequence, however, is that certificates used for non-browser TLS authentication between unaffiliated parties will be issued outside any Forum guideline, with no agreed validation practices, no certificate profile, and no audit scheme addressed to their particular risks.
 
 The purpose of the TLSWG is to close that gap. The Working Group will first establish, and document, which client authentication use cases genuinely require a shared trust framework, distinguishing them from those properly served by private PKI. It will then develop requirements sufficient to make such certificates interoperable and their issuance auditable. A later goal may include the creation of voluntary baseline targets for private PKI that wish to pursue audit.
 
@@ -28,10 +28,9 @@ The Working Group will leverage existing work rather than duplicate it. Validati
 
    1.2 **Success Criteria**
 
-* Publication of a use case and trust model report that identifies the client authentication use cases requiring a shared trust framework, and the relying party communities that would consume certificates issued under it.
-* Prepare a ballot to create guidelines for the Client Authentication Certificate Working Group.
-* In order to advance to Final Guidelines or Final Maintenance Guidelines, each specification is expected to have at least two independent implementations of each feature defined in the specification, demonstrated by certificates issued by unaffiliated Certificate Issuer Members and treated as valid by at least one Certificate Consumer Member.
-* Work with the Forum to have guidelines for the Client Authentication Certificate Working Group be approved and adopted.
+* Publication of a use case and trust model report that identifies the authentication use cases requiring a shared trust framework, and the relying party communities that would consume certificates issued under it.
+* Prepare a ballot to create TLSWG Baseline Requirement guidelines.
+* Work with the Forum to have guidelines for the TSLWG be approved and adopted.
 
    1.3 **Minimum Requirements**
 
@@ -46,28 +45,28 @@ The TLSWG will seek to:
 
 The following are out of scope for the TLSWG:
 
-* Certificates asserting id-kp-serverAuth, which are the responsibility of the Server Certificate Working Group.
+* Certificates asserting id-kp-serverAuth for browsers, which are the responsibility of the Server Certificate Working Group.
 * Certificates asserting id-kp-emailProtection, which are the responsibility of the S/MIME Certificate Working Group. Where a use case involves both client authentication and email protection, the TLSWG will coordinate with the SMCWG to determine the appropriate venue rather than issue competing requirements.
 * Certificates asserting id-kp-codeSigning or id-kp-timeStamping.
 * Authorization, entitlement, and access control decisions made by a relying party after successful authentication.
 * The design of authentication protocols, which is the responsibility of the IETF and other standards bodies.
 * Root program policy, inclusion criteria, and trust store operation, which remain matters for the operators of those programs.
 
-2. **Summary of Work**
+1. **Summary of Work**
 
    2.1 **Guidelines**
 
 The Working Group will deliver the following:
 
-* Draft of guidelines for WG review
+* Draft of guidelines for TLSWG review
 * Draft of ballot for approval of guidelines
 * Ballot approval of guidelines
 * Maintenance of guidelines
 
 Final Guidelines:
 
-* **Baseline Requirements for the Issuance and Management of Publicly-Trusted Client Authentication Certificates**, addressing at a minimum:
-  * the identifiers that may be asserted as the Subject of a client authentication certificate, and the methods by which a CA verifies the Applicant's control of, or entitlement to, each such identifier;
+* **Baseline Requirements for the Issuance and Management of Non-Browser TLS Certificates**, addressing at a minimum:
+  * the identifiers that may be asserted as the Subject of a non-browser TLS certificate, and the methods by which a CA verifies the Applicant's control of, or entitlement to, each such identifier;
   * certificate profiles for Subscriber certificates, Issuing CA certificates, and Root CA certificates, including which extensions are required, permitted, and prohibited;
   * key management, certificate lifecycle, validity periods, and revocation and status services, taking account of relying party behaviour in client authentication;
   * CA operational practices, physical and logical security, incident response, and disclosure, subject to coordination with other Forum CWGs to ensure consistency and avoid redundancy.
@@ -77,7 +76,7 @@ Final Guidelines:
 The TLSWG may work on related deliverables and non-normative documents, such as:
 
 * A use case and trust model report, as described in Section 1.2, to be completed before normative drafting begins.
-* Recommendations to the relevant audit scheme owners, including the WebTrust Task Force and the ACAB'c, regarding audit criteria suitable for client authentication certificates, and a proposed timetable for their availability.
+* Recommendations to the relevant audit scheme owners, including the WebTrust Task Force and the ACAB'c, regarding audit criteria suitable for non-browser TLS certificates, and a proposed timetable for their availability.
 * Guidance on the migration of existing deployments away from certificates asserting multiple Extended Key Usages.
 * Liaison statements and non-normative commentary directed to other Forum Working Groups and to external organizations.
 
@@ -91,7 +90,7 @@ The initial milestones are as follows. Such milestones may be modified or replac
 4. Agreement of the validation requirements for each supported identifier type.
 5. First complete Draft Guideline circulated for Working Group review.
 
-3. **Membership**
+6. **Membership**
 
    3.1 **Membership Criteria**
 
@@ -103,16 +102,14 @@ No organization may hold voting membership in more than one class at the same ti
 
  1. Certificate Issuer: A Certificate Issuer eligible for voting membership MUST meet all of the following criteria:
 
-   (i) It operates a Certification Authority that issues Certificates asserting `id-kp-clientAuth` to Subscribers with which it is not Affiliated.
-   (ii) It has a publicly available audit report or attestation statement, based upon publicly available audit criteria or an attestation scheme relevant to the issuance of client authentication certificates. This includes, but is not limited to: WebTrust for CAs v.2.0 or newer; or
-ETSI EN 319 411-1, which includes normative references to ETSI EN 319 401 (the latest version of the referenced ETSI documents should be applied). The audit report MUST report on the operational effectiveness of controls for a historic period of at least 60 days; no more than 27 months may have elapsed since the beginning of the reported-on period and no more than 15 months since the end of it; and the report MUST have been prepared by a natural or legal person duly authorized or licensed to conduct audits according to the relevant criteria or scheme.
-   (iii) It actively issues Certificates asserting `id-kp-clientAuth` that are accepted under the Client Authentication Trust Program of at least one Certificate Consumer Member.
+   (i) It operates a Certification Authority that issues Certificates asserting `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth` to Subscribers with which it is not Affiliated.
+   (ii) It has a publicly available audit report or attestation statement, based upon publicly available audit criteria or an attestation scheme relevant to the issuance of non-browser TLS certificates. This includes, but is not limited to: WebTrust for CAs v.2.0 or newer; or ETSI EN 319 411-1, which includes normative references to ETSI EN 319 401 (the latest version of the referenced ETSI documents should be applied). The audit report MUST report on the operational effectiveness of controls for a historic period of at least 60 days; no more than 27 months may have elapsed since the beginning of the reported-on period and no more than 15 months since the end of it; and the report MUST have been prepared by a natural or legal person duly authorized or licensed to conduct audits according to the relevant criteria or scheme.
 
- 2. Certificate Consumer: The defining characteristic of a Certificate Consumer is that it decides, on behalf of relying parties other than itself, which CAs may be relied upon for client authentication, and publishes that decision. A party that merely accepts client certificates under trust decisions made by someone else is not a Certificate Consumer. A Certificate Consumer eligible for voting membership MUST meet all of the following criteria:
+ 2. Certificate Consumer: The defining characteristic of a Certificate Consumer is that it decides, on behalf of relying parties other than itself, which CAs may be relied upon for TLS authentication, and publishes that decision. A party that merely accepts client certificates under trust decisions made by someone else is not a Certificate Consumer. A Certificate Consumer eligible for voting membership MUST meet all of the following criteria:
 
-   (i) It produces and maintains software, or operates a service, that authenticates remote parties by validating Certificates asserting `id-kp-clientAuth`, and that software or service is generally available to the public, whether commercially or as open source. The qualifying product or service MUST have been generally available for at least twelve (12) months before the date of application.
+   (i) It produces and maintains software, or operates a service, that authenticates remote parties by validating Certificates for non-browser TLS authentication using `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth`, and that software or service is generally available to the public, whether commercially or as open source. The qualifying product or service MUST have been generally available for at least twelve (12) months before the date of application.
    (ii) The qualifying product or service is relied upon by organizations that are not Affiliated with the Applicant, such that the Applicant's trust decisions affect parties other than itself and its Affiliates.
-   (iii) It establishes and maintains a Client Authentication Trust Program, meaning a documented set of policies by which it determines which CAs, including CAs with which it is not Affiliated, are accepted by the qualifying product or service for client authentication.
+   (iii) It establishes and maintains a non-browser TLS Trust Program, meaning a documented set of policies by which it determines which CAs, including CAs with which it is not Affiliated, are accepted by the qualifying product or service for non-browser TLS authentication.
 
 (b) Applicants must supply the following information: An Applicant SHALL supply:
 
@@ -123,18 +120,18 @@ ETSI EN 319 411-1, which includes normative references to ETSI EN 319 401 (the l
    * emergency contact information for security issues related to certificate trust;
    * disclosure of all Affiliations with any other Member or Applicant of this Working Group.
 
-A Certificate Issuer Applicant SHALL additionally supply the URL of its current qualifying audit report, and references to issued end entity Certificates demonstrating acceptance under a Certificate Consumer Member's Client Authentication Trust Program.
+A Certificate Issuer Applicant SHALL additionally supply the URL of its current qualifying audit report.
 
 A Certificate Consumer Applicant SHALL additionally supply:
 
    * the name of, and public URL for, the qualifying product or service, and evidence of the date from which it has been generally available;
-   * the public URL of its Client Authentication Trust Program, and evidence of the date from which it has been published;
+   * the public URL of its non-browser TLS Trust Program, and evidence of the date from which it has been published;
    * the list of CAs currently accepted under that program, including at least one with which the Applicant is not Affiliated;
    * evidence of reliance by unaffiliated organizations, which may take the form of published customer or user references, package or platform distribution statistics, publicly documented deployments, or an attestation from an officer of the Applicant stating the number of unaffiliated organizations relying on the qualifying product or service.
 
 (c) Approval process: An Applicant SHALL become a Member once the TLSWG has determined by consensus among the Members during a TLSWG Meeting or Teleconference that the Applicant meets all of the requirements above or, upon the request of any Member of the TLSWG, by a Ballot among Members of the TLSWG. Acceptance by consensus shall be determined, or a Ballot of the Members shall be held, after the Applicant indicates that it has presented all information required above, has responded to all follow-up questions from the TLSWG, and has complied with the requirements of Bylaw 5.5.
 
-Certificate Issuer applicants that are not actively issuing client authentication certificates but otherwise meet these membership criteria MAY request that the TLSWG grant them an invitation for Associate Member status in accordance with Bylaw 3.1, subject to conditions designated by the TLSWG.
+Certificate Issuer applicants that are not actively issuing non-browser TLS certificates but otherwise meet these membership criteria MAY request that the TLSWG grant them an invitation for Associate Member status in accordance with Bylaw 3.1, subject to conditions designated by the TLSWG.
 
 To confirm the list of initial Members, at least two-thirds of the organizations on the Chair's list of proposed, qualifying Members SHALL publicly vote in favor of adopting the list of Members. If the initial list fails to be adopted, the Chair SHALL consider the feedback and MAY update the initial list, and a subsequent vote using these same rules shall be performed. If an initial list of Members cannot be agreed upon, the TLSWG shall be dissolved.
 
@@ -148,14 +145,14 @@ Members may resign from the Working Group at any time. Resignation does not prev
 
    * it stops providing support for its qualifying product or service;
    * its qualifying product or service ceases to authenticate remote parties using Certificates asserting `id-kp-clientAuth`;
-   * it ceases to maintain or publish a conforming Client Authentication Trust Program, or that program ceases to accept any CA with which the Member is not Affiliated;
+   * it ceases to maintain or publish a conforming non-browser TLS Trust Program, or that program ceases to accept any CA with which the Member is not Affiliated;
    * its trust decisions cease to be made independently within the meaning of Section 3.1.
 
 (b) Certificate Issuer: A Certificate Issuer's membership may be suspended if any of the following become true:
 
    * it fails to perform and disclose its membership-qualifying audit and fifteen (15) months have elapsed since the end of the audit period of its last successful qualifying audit;
    * its qualifying audit is revoked, rescinded or withdrawn;
-   * it ceases to issue Certificates asserting `id-kp-clientAuth`, or those Certificates cease to be accepted under any Certificate Consumer Member's Client Authentication Trust Program.
+   * it ceases to issue Certificates asserting `id-kp-clientAuth`, or those Certificates cease to be accepted under any Certificate Consumer Member's non-browser TLS Trust Program.
 
 Any Voting Member who believes any of the above circumstances is true of any other Voting Member, that Voting Member may report it on the Working Group Public Mail List. The Working Group Chair will then investigate, including asking the reported Voting Member for an explanation or appropriate documentation. If evidence of continued qualification for membership is not forthcoming from the reported Voting Member within five (5) working days, the Working Group Chair will announce that such Voting Member is suspended and has become a Probationary Member, such announcement to include the clause(s) from the above list under which the suspension has been made.
 
@@ -188,7 +185,7 @@ The TLSWG will coordinate with, and seek guidance from, the following other CAB 
 The TLSWG may coordinate with, and seek guidance from, the following outside organizations:
 
 * IETF, in particular working groups concerned with TLS, PKIX successors, and certificate management protocols.
-* The WebTrust Task Force and the Accredited Conformity Assessment Bodies' Council (ACAB'c), regarding audit criteria applicable to client authentication certificates.
+* The WebTrust Task Force and the Accredited Conformity Assessment Bodies' Council (ACAB'c), regarding audit criteria applicable to non-browser TLS certificates.
 * ETSI Technical Committee on Electronic Signatures and Trust Infrastructures (TC ESI).
 * Accredited Standards Committee X9, regarding financial sector client authentication.
 * Such other organizations, including operators of sectoral and device identity trust frameworks, as the Working Group determines to be relevant.
