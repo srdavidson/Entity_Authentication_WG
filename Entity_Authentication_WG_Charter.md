@@ -16,11 +16,11 @@ The **mission** of the Entity Authentication Working Group (the "EAWG") is to de
 
 ## 1. **Working Group Scope**
 
-   1.1 **Summary of Working Group Goals and Objectives**
+### 1.1 **Summary of Working Group Goals and Objectives**
 
 Authentication using X.509 certificates is long established in enterprise and bilateral deployments, where the relying party configures its own trust anchors and validation rules. It is comparatively undefined where the relying party and the Subscriber are unaffiliated and no such bilateral arrangement is practical, and where the relying party therefore depends on a certificate issued by a third party CA under a shared trust anchor.
 
-Until recently, this gap was partly obscured because certificates issued under the TLS Baseline Requirements commonly asserted both `id-kp-serverAuth` and `id-kp-clientAuth`. Root program policies are removing that entanglement in favour of single-purpose hierarchies. That direction is not revisited by this Charter. Its consequence, however, is that certificates used for non-browser TLS authentication between unaffiliated parties will be issued outside any Forum guideline, with no agreed validation practices, no certificate profile, and no audit scheme addressed to their particular risks.
+Until recently, this gap was partly obscured because certificates issued under the TLS Baseline Requirements commonly asserted both `id-kp-serverAuth` and `id-kp-clientAuth`. Root program policies are removing that entanglement in favour of single-purpose hierarchies. That direction is not revisited by this Charter. Its consequence, however, is that certificates used for non-browser entity authentication between unaffiliated parties will be issued outside any Forum guideline, with no agreed validation practices, no certificate profile, and no audit scheme addressed to their particular risks.
 
 The purpose of the EAWG is to close that gap. The Working Group will first establish, and document, which client authentication use cases genuinely require a shared trust framework, distinguishing them from those properly served by private PKI. It will then develop requirements sufficient to make such certificates interoperable and their issuance auditable. A later goal may include the creation of voluntary baseline targets for private PKI that wish to pursue audit.
 
@@ -41,7 +41,7 @@ The EAWG will seek to:
 * Follow RFC 3647 and other technical requirements regarding the preparation of minutes and the use of public mailing lists.
 * Give due consideration to the security, stability and resiliency of existing deployments, and avoid unintended adverse effects on use cases that are outside the scope of this Charter.
 
-   1.4 **Out of Scope**
+### 1.4 **Out of Scope**
 
 The following are out of scope for the EAWG:
 
@@ -52,9 +52,9 @@ The following are out of scope for the EAWG:
 * The design of authentication protocols, which is the responsibility of the IETF and other standards bodies.
 * Root program policy, inclusion criteria, and trust store operation, which remain matters for the operators of those programs.
 
-1. **Summary of Work**
+## 2. **Summary of Work**
 
-   2.1 **Guidelines**
+### 2.1 **Guidelines**
 
 The Working Group will deliver the following:
 
@@ -65,8 +65,8 @@ The Working Group will deliver the following:
 
 Final Guidelines:
 
-* **Baseline Requirements for the Issuance and Management of Non-Browser TLS Certificates**, addressing at a minimum:
-  * the identifiers that may be asserted as the Subject of a non-browser TLS certificate, and the methods by which a CA verifies the Applicant's control of, or entitlement to, each such identifier;
+* **Baseline Requirements for the Issuance and Management of Entity Authentication Certificates**, addressing at a minimum:
+  * the identifiers that may be asserted as the Subject of an Entity Authentication certificate, and the methods by which a CA verifies the Applicant's control of, or entitlement to, each such identifier;
   * certificate profiles for Subscriber certificates, Issuing CA certificates, and Root CA certificates, including which extensions are required, permitted, and prohibited;
   * key management, certificate lifecycle, validity periods, and revocation and status services, taking account of relying party behaviour in TLS authentication;
   * CA operational practices, physical and logical security, incident response, and disclosure, subject to coordination with other Forum CWGs to ensure consistency and avoid redundancy.
@@ -80,7 +80,7 @@ The EAWG may work on related deliverables and non-normative documents, such as:
 * Guidance on the migration of existing deployments away from certificates asserting multiple Extended Key Usages.
 * Liaison statements and non-normative commentary directed to other Forum Working Groups and to external organizations.
 
-   2.3 **Milestones**
+### 2.3 **Milestones**
 
 The initial milestones are as follows. Such milestones may be modified or replaced by consensus of the Working Group members.
 
@@ -90,9 +90,9 @@ The initial milestones are as follows. Such milestones may be modified or replac
   4. Agreement of the validation requirements for each supported identifier type.
   5. First complete Draft Guideline circulated for Working Group review.
 
-3. **Membership**
+## 3. **Membership**
 
-   3.1 **Membership Criteria**
+### 3.1 **Membership Criteria**
 
 The EAWG shall have two classes of voting membership, Certificate Issuers and Certificate Consumers, which shall have equal standing in the decisions of the Working Group. The Working Group shall also include Interested Parties, Associate Members, and Probationary Members, as defined in the Bylaws.
 
@@ -137,7 +137,7 @@ To confirm the list of initial Members, at least two-thirds of the organizations
 
 The EAWG shall include Interested Parties, Associate Members, and Probationary Members, as defined in the Bylaws.
 
-   3.2 **Ending Membership**
+### 3.2 **Ending Membership**
 
 Members may resign from the Working Group at any time. Resignation does not prevent a Member from potentially having continuing obligations, under the Forum's IPR Policy or any other document.
 
@@ -164,14 +164,14 @@ A Probationary Member may participate in this Working Group and Forum Meetings, 
 
 Votes cast before a Voting Member's suspension is announced will stand.
 
-   3.3 **Application Process**
+### 3.3 **Application Process**
 Applicants shall supply the information set out in Section 3.1(b) and follow the process set out in Section 3.1(c).
 
 Existing CA/Browser Forum Members seeking to participate in the EAWG, in accordance with Bylaw 5.3.1(c), MUST formally declare their intent to participate in writing and provide the EAWG Chair with this declaration and evidence that they meet the criteria set forth above. Such Applicants SHALL become Members of the EAWG as determined by consensus during a EAWG Meeting or Teleconference, or upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG.
 
-4. **Dependencies and Liaisons**
+## 4. **Dependencies and Liaisons**
 
-   4.1 **CAB Forum Groups**
+### 4.1 **CAB Forum Groups**
 
 The EAWG will coordinate with, and seek guidance from, the following other CAB Forum Working Groups:
 
@@ -180,7 +180,7 @@ The EAWG will coordinate with, and seek guidance from, the following other CAB F
 * Network Security Working Group, regarding CA operational and network security requirements.
 * Forum Infrastructure Subcommittee, regarding mailing lists, wiki, and publication of documents.
 
-   4.2 **External Groups**
+### 4.2 **External Groups**
 
 The EAWG may coordinate with, and seek guidance from, the following outside organizations:
 
@@ -190,15 +190,15 @@ The EAWG may coordinate with, and seek guidance from, the following outside orga
 * Accredited Standards Committee X9, regarding financial sector client authentication.
 * Such other organizations, including operators of sectoral and device identity trust frameworks, as the Working Group determines to be relevant.
 
-5. **Participation**
+## 5. **Participation**
 
 To be successful, the EAWG is expected to have 10 or more active participants for its duration. The Working Group participants are expected to contribute an appropriate number of hours per week towards the Working Group’s activities.
 
-6. **Communication**
+## 6. **Communication**
 
 Most Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis. This group will conduct its work primarily on the EAWG mailing list, which is available to the public. Information about the group will be available via the CAB Forum website.
 
-7. **Decision Process**
+## 7. **Decision Process**
 
 The EAWG  will seek to make decisions when there is consensus and with due process. The expectation is that, typically, the Working Group Chair or other participant makes an initial proposal, which is then refined in discussion with the Working Group participants, and consensus emerges with little formal voting being required. However, if a decision is necessary for timely progress, but consensus is not achieved after careful consideration of the range of views presented, the Working Group Chair should put the question out for voting within the WG (using email and/or web-based survey techniques) and record a decision, along with any objections. The matter should then be considered resolved unless and until new information becomes available.
 
@@ -208,12 +208,12 @@ A Member admitted after a ballot has been proposed may not vote on that ballot.
 
 The EAWG may establish subcommittees, by formal ballot, to address any of the EAWG's business as specified in the ballot. Subcommittees are open to all EAWG Members and must post all agendas and minutes on a public mail list.
 
-8. **IPR Policy**
+## 8. **IPR Policy**
 
 The EAWG is subject to the current version of the CAB Forum Intellectual Rights Policy (the “IPR Policy”).
 
 To promote the widest adoption of the CAB Forum Guidelines, CAB Forum seeks to issue Final Guidelines and Final Maintenance Guidelines that can be implemented, according to the IPR Policy, on a CAB Forum Royalty-Free License basis. For information about exclusion of Essential Claims, see Section 4 of the IPR Policy.
 
-9. **About this Charter**
+## 9. **About this Charter**
 
 This EAWG Charter has been created according to Section 5.3.1 of the Bylaws of the CAB Forum. In the event of a conflict between this charter and any provision in either the Bylaws or the IPR Policy, the provision in the Bylaws or IPR Policy shall take precedence.
