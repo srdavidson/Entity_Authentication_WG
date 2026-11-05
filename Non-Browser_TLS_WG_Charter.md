@@ -1,6 +1,6 @@
 # Non-Browser TLS Certificate Working Group Charter
 
-The **mission** of the Non-Browser TLS Certificate Working Group (the "TLSWG") is to develop, adopt, and maintain requirements for the issuance and management of certificates that assert the `id-kp-clientAuth` (OID 1.3.6.1.5.5.7.3.4.2) and `id-kp-serverAuth` (OID: 1.3.6.1.5.5.7.3.1) Extended Key Usages for uses outside web browsers. The requirements are intended to create a common, independently auditable trust framework so that relying parties other than the Issuer or Subscriber can authenticate remote servers and clients on the basis of consistent issuance practices rather than bilateral arrangements.
+The **mission** of the Non-Browser TLS Certificate Working Group (the "TLSWG") is to develop, adopt, and maintain requirements for the issuance and management of certificates that assert the `id-kp-clientAuth` (OID 1.3.6.1.5.5.7.3.2) and `id-kp-serverAuth` (OID: 1.3.6.1.5.5.7.3.1) Extended Key Usages for uses outside web browsers. The requirements are intended to create a common, independently auditable trust framework so that relying parties other than the Issuer or Subscriber can authenticate remote servers and clients on the basis of consistent issuance practices rather than bilateral arrangements.
 
 **End date**: The TLSWG is chartered indefinitely until it is dissolved as specified in Bylaw 5.3.2(c).
 
