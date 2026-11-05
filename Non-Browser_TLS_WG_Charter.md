@@ -84,13 +84,13 @@ The TLSWG may work on related deliverables and non-normative documents, such as:
 
 The initial milestones are as follows. Such milestones may be modified or replaced by consensus of the Working Group members.
 
-1. Within three months of chartering: confirmation of the initial membership list, election of Chair and Vice Chair, and agreement of a work plan addressing the following milestones.
-2. Publication of the use case and trust model report, including a determination of which use cases the Baseline Requirements will address.
-3. Agreement of the certificate profile and of the identifier types to be supported.
-4. Agreement of the validation requirements for each supported identifier type.
-5. First complete Draft Guideline circulated for Working Group review.
+  1. Within three months of chartering: confirmation of the initial membership list, election of Chair and Vice Chair, and agreement of a work plan addressing the following milestones.
+  2. Agreement of a roadmap of use cases to be addded to the Guideline.
+  3. Agreement of the certificate profiles.
+  4. Agreement of the validation requirements for each supported identifier type.
+  5. First complete Draft Guideline circulated for Working Group review.
 
-3. **Membership**
+6. **Membership**
 
    3.1 **Membership Criteria**
 
