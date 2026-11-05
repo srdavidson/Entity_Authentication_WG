@@ -65,10 +65,10 @@ The Working Group will deliver the following:
 
 Final Guidelines:
 
-* **Baseline Requirements for the Issuance and Management of Entity Authentication Certificates**, addressing at a minimum:
+* *Baseline Requirements for the Issuance and Management of Entity Authentication Certificates*, addressing at a minimum:
   * the identifiers that may be asserted as the Subject of an Entity Authentication certificate, and the methods by which a CA verifies the Applicant's control of, or entitlement to, each such identifier;
   * certificate profiles for Subscriber certificates, Issuing CA certificates, and Root CA certificates, including which extensions are required, permitted, and prohibited;
-  * key management, certificate lifecycle, validity periods, and revocation and status services, taking account of relying party behaviour in TLS authentication;
+  * key management, certificate lifecycle, validity periods, and revocation and status services, taking account of relying party behaviour in entity authentication;
   * CA operational practices, physical and logical security, incident response, and disclosure, subject to coordination with other Forum CWGs to ensure consistency and avoid redundancy.
 
    2.2 **Other Deliverables**
@@ -76,7 +76,7 @@ Final Guidelines:
 The EAWG may work on related deliverables and non-normative documents, such as:
 
 * A use case and trust model report, as described in Section 1.2, to be completed before normative drafting begins.
-* Recommendations to the relevant audit scheme owners, including the WebTrust Task Force and the ACAB'c, regarding audit criteria suitable for non-browser TLS certificates, and a proposed timetable for their availability.
+* Recommendations to the relevant audit scheme owners, including the WebTrust Task Force and the ACAB'c, regarding audit criteria suitable for non-browser entity authentication certificates, and a proposed timetable for their availability.
 * Guidance on the migration of existing deployments away from certificates asserting multiple Extended Key Usages.
 * Liaison statements and non-normative commentary directed to other Forum Working Groups and to external organizations.
 
@@ -103,13 +103,13 @@ No organization may hold voting membership in more than one class at the same ti
  1. Certificate Issuer: A Certificate Issuer eligible for voting membership MUST meet all of the following criteria:
 
    (i) It operates a Certification Authority that issues Certificates asserting `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth` to Subscribers with which it is not Affiliated.
-   (ii) It has a publicly available audit report or attestation statement, based upon publicly available audit criteria or an attestation scheme relevant to the issuance of non-browser TLS certificates. This includes, but is not limited to: WebTrust for CAs v.2.0 or newer; or ETSI EN 319 411-1, which includes normative references to ETSI EN 319 401 (the latest version of the referenced ETSI documents should be applied). The audit report MUST report on the operational effectiveness of controls for a historic period of at least 60 days; no more than 27 months may have elapsed since the beginning of the reported-on period and no more than 15 months since the end of it; and the report MUST have been prepared by a natural or legal person duly authorized or licensed to conduct audits according to the relevant criteria or scheme.
+   (ii) It has a publicly available audit report or attestation statement, based upon publicly available audit criteria or an attestation scheme relevant to the issuance of non-browser entity authentication certificates. This includes, but is not limited to: WebTrust for CAs v.2.0 or newer; or ETSI EN 319 411-1, which includes normative references to ETSI EN 319 401 (the latest version of the referenced ETSI documents should be applied). The audit report MUST report on the operational effectiveness of controls for a historic period of at least 60 days; no more than 27 months may have elapsed since the beginning of the reported-on period and no more than 15 months since the end of it; and the report MUST have been prepared by a natural or legal person duly authorized or licensed to conduct audits according to the relevant criteria or scheme.
 
- 2. Certificate Consumer: The defining characteristic of a Certificate Consumer is that it decides, on behalf of relying parties other than itself, which CAs may be relied upon for TLS authentication, and publishes that decision. A party that merely accepts client certificates under trust decisions made by someone else is not a Certificate Consumer. A Certificate Consumer eligible for voting membership MUST meet all of the following criteria:
+ 2. Certificate Consumer: The defining characteristic of a Certificate Consumer is that it decides, on behalf of relying parties other than itself, which CAs may be relied upon for entity authentication, and publishes that decision. A party that merely accepts client certificates under trust decisions made by someone else is not a Certificate Consumer. A Certificate Consumer eligible for voting membership MUST meet all of the following criteria:
 
-   (i) It produces and maintains software, or operates a service, that authenticates remote parties by validating Certificates for non-browser TLS authentication using `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth`, and that software or service is generally available to the public, whether commercially or as open source. The qualifying product or service MUST have been generally available for at least twelve (12) months before the date of application.
+   (i) It produces and maintains software, or operates a service, that authenticates remote parties by validating Certificates for non-browser entity authentication using `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth`, and that software or service is generally available to the public, whether commercially or as open source. The qualifying product or service MUST have been generally available for at least twelve (12) months before the date of application.
    (ii) The qualifying product or service is relied upon by organizations that are not Affiliated with the Applicant, such that the Applicant's trust decisions affect parties other than itself and its Affiliates.
-   (iii) It establishes and maintains a non-browser TLS Trust Program, meaning a documented set of policies by which it determines which CAs, including CAs with which it is not Affiliated, are accepted by the qualifying product or service for non-browser TLS authentication.  The Certificate Consumer must to require conformance in its Trust Program within 16 months of the first Final Guideline.
+   (iii) It establishes and maintains a non-browser entity authentication Trust Program, meaning a documented set of policies by which it determines which CAs, including CAs with which it is not Affiliated, are accepted by the qualifying product or service for non-browser entity authentication.  The Certificate Consumer must to require conformance in its Trust Program within 16 months of the first Final Guideline.
 
 (b) Applicants must supply the following information: An Applicant SHALL supply:
 
@@ -125,13 +125,13 @@ A Certificate Issuer Applicant SHALL additionally supply the URL of its current 
 A Certificate Consumer Applicant SHALL additionally supply:
 
    * the name of, and public URL for, the qualifying product or service, and evidence of the date from which it has been generally available;
-   * the public URL of its non-browser TLS Trust Program, and evidence of the date from which it has been published;
+   * the public URL of its non-browser entity authentication Trust Program, and evidence of the date from which it has been published;
    * the list of CAs currently accepted under that program, including at least one with which the Applicant is not Affiliated;
    * evidence of reliance by unaffiliated organizations, which may take the form of published customer or user references, package or platform distribution statistics, publicly documented deployments, or an attestation from an officer of the Applicant stating the number of unaffiliated organizations relying on the qualifying product or service.
 
 (c) Approval process: An Applicant SHALL become a Member once the EAWG has determined by consensus among the Members during a EAWG Meeting or Teleconference that the Applicant meets all of the requirements above or, upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG. Acceptance by consensus shall be determined, or a Ballot of the Members shall be held, after the Applicant indicates that it has presented all information required above, has responded to all follow-up questions from the EAWG, and has complied with the requirements of Bylaw 5.5.
 
-Certificate Issuer applicants that are not actively issuing non-browser TLS certificates but otherwise meet these membership criteria MAY request that the EAWG grant them an invitation for Associate Member status in accordance with Bylaw 3.1, subject to conditions designated by the EAWG.
+Certificate Issuer applicants that are not actively issuing non-browser entity authentication certificates but otherwise meet these membership criteria MAY request that the EAWG grant them an invitation for Associate Member status in accordance with Bylaw 3.1, subject to conditions designated by the EAWG.
 
 To confirm the list of initial Members, at least two-thirds of the organizations on the Chair's list of proposed, qualifying Members SHALL publicly vote in favor of adopting the list of Members. If the initial list fails to be adopted, the Chair SHALL consider the feedback and MAY update the initial list, and a subsequent vote using these same rules shall be performed. If an initial list of Members cannot be agreed upon, the EAWG shall be dissolved.
 
@@ -145,7 +145,7 @@ Members may resign from the Working Group at any time. Resignation does not prev
 
    * it stops providing support for its qualifying product or service;
    * its qualifying product or service ceases to authenticate remote parties using Certificates asserting `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth`;
-   * it ceases to maintain or publish a conforming non-browser TLS Trust Program, or that program ceases to accept any CA with which the Member is not Affiliated;
+   * it ceases to maintain or publish a conforming non-browser entity authentication Trust Program, or that program ceases to accept any CA with which the Member is not Affiliated;
    * its trust decisions cease to be made independently within the meaning of Section 3.1.
 
 (b) Certificate Issuer: A Certificate Issuer's membership may be suspended if any of the following become true:
@@ -185,7 +185,7 @@ The EAWG will coordinate with, and seek guidance from, the following other CAB F
 The EAWG may coordinate with, and seek guidance from, the following outside organizations:
 
 * IETF, in particular working groups concerned with TLS, PKIX successors, and certificate management protocols.
-* The WebTrust Task Force and the Accredited Conformity Assessment Bodies' Council (ACAB'c), regarding audit criteria applicable to non-browser TLS certificates.
+* The WebTrust Task Force and the Accredited Conformity Assessment Bodies' Council (ACAB'c), regarding audit criteria applicable to non-browser entity authentication certificates.
 * ETSI Technical Committee on Electronic Signatures and Trust Infrastructures (TC ESI).
 * Accredited Standards Committee X9, regarding financial sector client authentication.
 * Such other organizations, including operators of sectoral and device identity trust frameworks, as the Working Group determines to be relevant.
