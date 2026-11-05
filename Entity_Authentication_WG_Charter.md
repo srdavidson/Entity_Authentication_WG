@@ -111,7 +111,9 @@ No organization may hold voting membership in more than one class at the same ti
    (ii) The qualifying product or service is relied upon by organizations that are not Affiliated with the Applicant, such that the Applicant's trust decisions affect parties other than itself and its Affiliates.
    (iii) It establishes and maintains a non-browser entity authentication Trust Program, meaning a documented set of policies by which it determines which CAs, including CAs with which it is not Affiliated, are accepted by the qualifying product or service for non-browser entity authentication.  The Certificate Consumer must to require conformance in its Trust Program within 16 months of the first Final Guideline.
 
-(b) Applicants must supply the following information: An Applicant SHALL supply:
+(b) Applicants must supply the following information. 
+
+An Applicant SHALL supply:
 
    * confirmation of the single class under which it applies;
    * the organization name as it is to appear on the Forum website and in Forum documents;
