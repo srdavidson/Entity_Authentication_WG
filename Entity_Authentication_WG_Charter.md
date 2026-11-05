@@ -14,7 +14,7 @@ The **mission** of the Entity Authentication Working Group (the "EAWG") is to de
 
 **Voting Structure for WG**: Two-thirds or more of the votes cast by voting Members must be in favor of a ballot for it to be adopted. 
 
-1. **Working Group Scope**
+## 1. **Working Group Scope**
 
    1.1 **Summary of Working Group Goals and Objectives**
 
@@ -26,13 +26,13 @@ The purpose of the EAWG is to close that gap. The Working Group will first estab
 
 The Working Group will leverage existing work rather than duplicate it. Validation methods in the TLS Baseline Requirements and the S/MIME Baseline Requirements, the certificate profile conventions established by both, and the identity frameworks used by ETSI EN 319 411-1 and by sectoral schemes such as the ASC X9 PKI are all expected to inform the Working Group's deliverables. The Working Group will coordinate with the Server Certificate Working Group and the S/MIME Certificate Working Group so that requirements do not conflict or overlap.
 
-   1.2 **Success Criteria**
+### 1.2 **Success Criteria**
 
 * Publication of a use case and trust model report that identifies the authentication use cases requiring a shared trust framework, and the relying party communities that would consume certificates issued under it.
 * Prepare a ballot to create EAWG Baseline Requirement guidelines.
 * Work with the Forum to have guidelines for the EAWG be approved and adopted.
 
-   1.3 **Minimum Requirements**
+### 1.3 **Minimum Requirements**
 
 The EAWG will seek to:
 
@@ -45,14 +45,14 @@ The EAWG will seek to:
 
 The following are out of scope for the EAWG:
 
-* Certificates asserting id-kp-serverAuth for browsers, which are the responsibility of the Server Certificate Working Group.
-* Certificates asserting id-kp-emailProtection, which are the responsibility of the S/MIME Certificate Working Group. Where a use case involves both client authentication and email protection, the EAWG will coordinate with the SMCWG to determine the appropriate venue rather than issue competing requirements.
-* Certificates asserting id-kp-codeSigning or id-kp-timeStamping.
+* Certificates asserting `id-kp-serverAuth` for browsers, which are the responsibility of the Server Certificate Working Group.
+* Certificates asserting `id-kp-emailProtection`, which are the responsibility of the S/MIME Certificate Working Group. Where a use case involves both client authentication and email protection, the EAWG will coordinate with the SMCWG to determine the appropriate venue rather than issue competing requirements.
+* Certificates asserting `id-kp-codeSigning` or `id-kp-timeStamping`.
 * Authorization, entitlement, and access control decisions made by a relying party after successful authentication.
 * The design of authentication protocols, which is the responsibility of the IETF and other standards bodies.
 * Root program policy, inclusion criteria, and trust store operation, which remain matters for the operators of those programs.
 
-2. **Summary of Work**
+1. **Summary of Work**
 
    2.1 **Guidelines**
 
