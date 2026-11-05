@@ -75,7 +75,7 @@ Final Guidelines:
 
 The EAWG may work on related deliverables and non-normative documents, such as:
 
-* A use case and trust model report, as described in Section 1.2, to be completed before normative drafting begins.
+* A use case and trust model report, as described in Section 1.2.
 * Recommendations to the relevant audit scheme owners, including the WebTrust Task Force and the ACAB'c, regarding audit criteria suitable for non-browser entity authentication certificates, and a proposed timetable for their availability.
 * Guidance on the migration of existing deployments away from certificates asserting multiple Extended Key Usages.
 * Liaison statements and non-normative commentary directed to other Forum Working Groups and to external organizations.
