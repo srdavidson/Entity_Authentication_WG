@@ -108,7 +108,7 @@ No organization may hold voting membership in more than one class at the same ti
 
    (i) It produces and maintains software, or operates a service, that authenticates remote parties by validating Certificates for non-browser entity authentication using `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth`, and that software or service is generally available to the public, whether commercially or as open source. The qualifying product or service MUST have been generally available for at least twelve (12) months before the date of application.
    (ii) The qualifying product or service is relied upon by organizations that are not Affiliated with the Applicant, such that the Applicant's trust decisions affect parties other than itself and its Affiliates.
-   (iii) It establishes and maintains a non-browser entity authentication Trust Program, meaning a documented set of policies by which it determines which CAs, including CAs with which it is not Affiliated, are accepted by the qualifying product or service for non-browser entity authentication.  The Certificate Consumer must to require conformance in its Trust Program within 16 months of the first Final Guideline.
+   (iii) It establishes and maintains a non-browser entity authentication Trust Program, meaning a documented set of policies by which it determines which CAs, including CAs with which it is not Affiliated, are accepted by the qualifying product or service for non-browser entity authentication.  The Certificate Consumer must undertake to require conformance in its Trust Program within 16 months of availability of corresponding audit criteria for the first Final Guideline.
 
 (b) Applicants must supply the following information. 
 
@@ -130,7 +130,7 @@ A Certificate Consumer Applicant SHALL additionally supply:
    * the list of CAs currently accepted under that program, including at least one with which the Applicant is not Affiliated;
    * evidence of reliance by unaffiliated organizations, which may take the form of published customer or user references, package or platform distribution statistics, publicly documented deployments, or an attestation from an officer of the Applicant stating the number of unaffiliated organizations relying on the qualifying product or service.
 
-(c) Approval process: An Applicant SHALL become a Member once the EAWG has determined by consensus among the Members during a EAWG Meeting or Teleconference that the Applicant meets all of the requirements above or, upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG. Acceptance by consensus shall be determined, or a Ballot of the Members shall be held, after the Applicant indicates that it has presented all information required above, has responded to all follow-up questions from the EAWG, and has complied with the requirements of Bylaw 5.5.
+(c) Approval process: An Applicant SHALL become a Member once the EAWG has determined by consensus among the Members during an EAWG Meeting or Teleconference that the Applicant meets all of the requirements above or, upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG. Acceptance by consensus shall be determined, or a Ballot of the Members shall be held, after the Applicant indicates that it has presented all information required above, has responded to all follow-up questions from the EAWG, and has complied with the requirements of Bylaw 5.5.
 
 Certificate Issuer applicants that are not actively issuing non-browser entity authentication certificates but otherwise meet these membership criteria MAY request that the EAWG grant them an invitation for Associate Member status in accordance with Bylaw 3.1, subject to conditions designated by the EAWG.
 
@@ -167,7 +167,7 @@ Votes cast before a Voting Member's suspension is announced will stand.
 ### 3.3 **Application Process**
 Applicants shall supply the information set out in Section 3.1(b) and follow the process set out in Section 3.1(c).
 
-Existing CA/Browser Forum Members seeking to participate in the EAWG, in accordance with Bylaw 5.3.1(3), MUST formally declare their intent to participate in writing and provide the EAWG Chair with this declaration and evidence that they meet the criteria set forth above. Such Applicants SHALL become Members of the EAWG as determined by consensus during a EAWG Meeting or Teleconference, or upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG.
+Existing CA/Browser Forum Members seeking to participate in the EAWG, in accordance with Bylaw 5.3.1(3), MUST formally declare their intent to participate in writing and provide the EAWG Chair with this declaration and evidence that they meet the criteria set forth above. Such Applicants SHALL become Members of the EAWG as determined by consensus during an EAWG Meeting or Teleconference, or upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG.
 
 ## 4. **Dependencies and Liaisons**
 
