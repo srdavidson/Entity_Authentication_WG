@@ -169,7 +169,7 @@ Votes cast before a Voting Member's suspension is announced will stand.
 ### 3.3 **Application Process**
 Applicants shall supply the information set out in Section 3.1(b) and follow the process set out in Section 3.1(c).
 
-Existing CA/Browser Forum Members seeking to participate in the EAWG, in accordance with Bylaw 5.3.1(c), MUST formally declare their intent to participate in writing and provide the EAWG Chair with this declaration and evidence that they meet the criteria set forth above. Such Applicants SHALL become Members of the EAWG as determined by consensus during a EAWG Meeting or Teleconference, or upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG.
+Existing CA/Browser Forum Members seeking to participate in the EAWG, in accordance with Bylaw 5.3.1(3), MUST formally declare their intent to participate in writing and provide the EAWG Chair with this declaration and evidence that they meet the criteria set forth above. Such Applicants SHALL become Members of the EAWG as determined by consensus during a EAWG Meeting or Teleconference, or upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG.
 
 ## 4. **Dependencies and Liaisons**
 
