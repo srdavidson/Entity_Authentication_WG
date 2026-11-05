@@ -1,8 +1,8 @@
-# Non-Browser TLS Certificate Working Group Charter
+# Entity Authentication Working Group Charter
 
-The **mission** of the Non-Browser TLS Certificate Working Group (the "TLSWG") is to develop, adopt, and maintain requirements for the issuance and management of certificates that assert the `id-kp-clientAuth` (OID 1.3.6.1.5.5.7.3.2) and `id-kp-serverAuth` (OID: 1.3.6.1.5.5.7.3.1) Extended Key Usages for uses outside web browsers (such as TLS authentication, EAP-TLS, IKEv2, and adjacent smart card logon deployments, among others). The requirements are intended to create a common, independently auditable trust framework so that relying parties other than the Issuer or Subscriber can authenticate remote servers and clients on the basis of consistent issuance practices rather than bilateral arrangements.
+The **mission** of the Entity Authentication Working Group (the "EAWG") is to develop, adopt, and maintain requirements for the issuance and management of certificates that assert the `id-kp-clientAuth` (OID 1.3.6.1.5.5.7.3.2) and `id-kp-serverAuth` (OID: 1.3.6.1.5.5.7.3.1) Extended Key Usages for uses outside web browsers (such as TLS authentication, EAP-TLS, IKEv2, and adjacent smart card logon deployments, among others). The requirements are intended to create a common, independently auditable trust framework so that relying parties other than the Issuer or Subscriber can authenticate remote servers and clients on the basis of consistent issuance practices rather than bilateral arrangements.
 
-**End date**: The TLSWG is chartered indefinitely until it is dissolved as specified in Bylaw 5.3.2(3).
+**End date**: The EAWG is chartered indefinitely until it is dissolved as specified in Bylaw 5.3.2(3).
 
 **Initial Working Group Chair(s)**: TBD
 
@@ -22,19 +22,19 @@ Authentication using X.509 certificates is long established in enterprise and bi
 
 Until recently, this gap was partly obscured because certificates issued under the TLS Baseline Requirements commonly asserted both `id-kp-serverAuth` and `id-kp-clientAuth`. Root program policies are removing that entanglement in favour of single-purpose hierarchies. That direction is not revisited by this Charter. Its consequence, however, is that certificates used for non-browser TLS authentication between unaffiliated parties will be issued outside any Forum guideline, with no agreed validation practices, no certificate profile, and no audit scheme addressed to their particular risks.
 
-The purpose of the TLSWG is to close that gap. The Working Group will first establish, and document, which client authentication use cases genuinely require a shared trust framework, distinguishing them from those properly served by private PKI. It will then develop requirements sufficient to make such certificates interoperable and their issuance auditable. A later goal may include the creation of voluntary baseline targets for private PKI that wish to pursue audit.
+The purpose of the EAWG is to close that gap. The Working Group will first establish, and document, which client authentication use cases genuinely require a shared trust framework, distinguishing them from those properly served by private PKI. It will then develop requirements sufficient to make such certificates interoperable and their issuance auditable. A later goal may include the creation of voluntary baseline targets for private PKI that wish to pursue audit.
 
 The Working Group will leverage existing work rather than duplicate it. Validation methods in the TLS Baseline Requirements and the S/MIME Baseline Requirements, the certificate profile conventions established by both, and the identity frameworks used by ETSI EN 319 411-1 and by sectoral schemes such as the ASC X9 PKI are all expected to inform the Working Group's deliverables. The Working Group will coordinate with the Server Certificate Working Group and the S/MIME Certificate Working Group so that requirements do not conflict or overlap.
 
    1.2 **Success Criteria**
 
 * Publication of a use case and trust model report that identifies the authentication use cases requiring a shared trust framework, and the relying party communities that would consume certificates issued under it.
-* Prepare a ballot to create TLSWG Baseline Requirement guidelines.
-* Work with the Forum to have guidelines for the TLSWG be approved and adopted.
+* Prepare a ballot to create EAWG Baseline Requirement guidelines.
+* Work with the Forum to have guidelines for the EAWG be approved and adopted.
 
    1.3 **Minimum Requirements**
 
-The TLSWG will seek to:
+The EAWG will seek to:
 
 * Comply with all applicable laws, rules and regulations.
 * Comply with the CAB Forum IPR Policy and Bylaws.
@@ -43,10 +43,10 @@ The TLSWG will seek to:
 
    1.4 **Out of Scope**
 
-The following are out of scope for the TLSWG:
+The following are out of scope for the EAWG:
 
 * Certificates asserting id-kp-serverAuth for browsers, which are the responsibility of the Server Certificate Working Group.
-* Certificates asserting id-kp-emailProtection, which are the responsibility of the S/MIME Certificate Working Group. Where a use case involves both client authentication and email protection, the TLSWG will coordinate with the SMCWG to determine the appropriate venue rather than issue competing requirements.
+* Certificates asserting id-kp-emailProtection, which are the responsibility of the S/MIME Certificate Working Group. Where a use case involves both client authentication and email protection, the EAWG will coordinate with the SMCWG to determine the appropriate venue rather than issue competing requirements.
 * Certificates asserting id-kp-codeSigning or id-kp-timeStamping.
 * Authorization, entitlement, and access control decisions made by a relying party after successful authentication.
 * The design of authentication protocols, which is the responsibility of the IETF and other standards bodies.
@@ -58,7 +58,7 @@ The following are out of scope for the TLSWG:
 
 The Working Group will deliver the following:
 
-* Draft of guidelines for TLSWG review
+* Draft of guidelines for EAWG review
 * Draft of ballot for approval of guidelines
 * Ballot approval of guidelines
 * Maintenance of guidelines
@@ -73,7 +73,7 @@ Final Guidelines:
 
    2.2 **Other Deliverables**
 
-The TLSWG may work on related deliverables and non-normative documents, such as:
+The EAWG may work on related deliverables and non-normative documents, such as:
 
 * A use case and trust model report, as described in Section 1.2, to be completed before normative drafting begins.
 * Recommendations to the relevant audit scheme owners, including the WebTrust Task Force and the ACAB'c, regarding audit criteria suitable for non-browser TLS certificates, and a proposed timetable for their availability.
@@ -94,7 +94,7 @@ The initial milestones are as follows. Such milestones may be modified or replac
 
    3.1 **Membership Criteria**
 
-The TLSWG shall have two classes of voting membership, Certificate Issuers and Certificate Consumers, which shall have equal standing in the decisions of the Working Group. The Working Group shall also include Interested Parties, Associate Members, and Probationary Members, as defined in the Bylaws.
+The EAWG shall have two classes of voting membership, Certificate Issuers and Certificate Consumers, which shall have equal standing in the decisions of the Working Group. The Working Group shall also include Interested Parties, Associate Members, and Probationary Members, as defined in the Bylaws.
 
 No organization may hold voting membership in more than one class at the same time. An Applicant that satisfies the criteria for both classes SHALL indicate the single class under which it applies, and may change class only by re-applying.
 
@@ -109,7 +109,7 @@ No organization may hold voting membership in more than one class at the same ti
 
    (i) It produces and maintains software, or operates a service, that authenticates remote parties by validating Certificates for non-browser TLS authentication using `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth`, and that software or service is generally available to the public, whether commercially or as open source. The qualifying product or service MUST have been generally available for at least twelve (12) months before the date of application.
    (ii) The qualifying product or service is relied upon by organizations that are not Affiliated with the Applicant, such that the Applicant's trust decisions affect parties other than itself and its Affiliates.
-   (iii) It establishes and maintains a non-browser TLS Trust Program, meaning a documented set of policies by which it determines which CAs, including CAs with which it is not Affiliated, are accepted by the qualifying product or service for non-browser TLS authentication.
+   (iii) It establishes and maintains a non-browser TLS Trust Program, meaning a documented set of policies by which it determines which CAs, including CAs with which it is not Affiliated, are accepted by the qualifying product or service for non-browser TLS authentication.  The Certificate Consumer must to require conformance in its Trust Program within 16 months of the first Final Guideline.
 
 (b) Applicants must supply the following information: An Applicant SHALL supply:
 
@@ -129,13 +129,13 @@ A Certificate Consumer Applicant SHALL additionally supply:
    * the list of CAs currently accepted under that program, including at least one with which the Applicant is not Affiliated;
    * evidence of reliance by unaffiliated organizations, which may take the form of published customer or user references, package or platform distribution statistics, publicly documented deployments, or an attestation from an officer of the Applicant stating the number of unaffiliated organizations relying on the qualifying product or service.
 
-(c) Approval process: An Applicant SHALL become a Member once the TLSWG has determined by consensus among the Members during a TLSWG Meeting or Teleconference that the Applicant meets all of the requirements above or, upon the request of any Member of the TLSWG, by a Ballot among Members of the TLSWG. Acceptance by consensus shall be determined, or a Ballot of the Members shall be held, after the Applicant indicates that it has presented all information required above, has responded to all follow-up questions from the TLSWG, and has complied with the requirements of Bylaw 5.5.
+(c) Approval process: An Applicant SHALL become a Member once the EAWG has determined by consensus among the Members during a EAWG Meeting or Teleconference that the Applicant meets all of the requirements above or, upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG. Acceptance by consensus shall be determined, or a Ballot of the Members shall be held, after the Applicant indicates that it has presented all information required above, has responded to all follow-up questions from the EAWG, and has complied with the requirements of Bylaw 5.5.
 
-Certificate Issuer applicants that are not actively issuing non-browser TLS certificates but otherwise meet these membership criteria MAY request that the TLSWG grant them an invitation for Associate Member status in accordance with Bylaw 3.1, subject to conditions designated by the TLSWG.
+Certificate Issuer applicants that are not actively issuing non-browser TLS certificates but otherwise meet these membership criteria MAY request that the EAWG grant them an invitation for Associate Member status in accordance with Bylaw 3.1, subject to conditions designated by the EAWG.
 
-To confirm the list of initial Members, at least two-thirds of the organizations on the Chair's list of proposed, qualifying Members SHALL publicly vote in favor of adopting the list of Members. If the initial list fails to be adopted, the Chair SHALL consider the feedback and MAY update the initial list, and a subsequent vote using these same rules shall be performed. If an initial list of Members cannot be agreed upon, the TLSWG shall be dissolved.
+To confirm the list of initial Members, at least two-thirds of the organizations on the Chair's list of proposed, qualifying Members SHALL publicly vote in favor of adopting the list of Members. If the initial list fails to be adopted, the Chair SHALL consider the feedback and MAY update the initial list, and a subsequent vote using these same rules shall be performed. If an initial list of Members cannot be agreed upon, the EAWG shall be dissolved.
 
-The TLSWG shall include Interested Parties, Associate Members, and Probationary Members, as defined in the Bylaws.
+The EAWG shall include Interested Parties, Associate Members, and Probationary Members, as defined in the Bylaws.
 
    3.2 **Ending Membership**
 
@@ -158,7 +158,7 @@ Any Voting Member who believes any of the above circumstances is true of any oth
 
 A Probationary Member who believes it has now re-met the membership criteria under the relevant clauses shall post evidence to the Working Group Public Mail List. The Working Group Chair will examine the evidence, and if appropriate, reinstate the member to voting status, by public announcement.
 
-Where the Chair's determination is disputed by the affected Member or by any other Member, the question SHALL be decided by ballot of the TLSWG under Section 7.
+Where the Chair's determination is disputed by the affected Member or by any other Member, the question SHALL be decided by ballot of the EAWG under Section 7.
 
 A Probationary Member may participate in this Working Group and Forum Meetings, Teleconferences, and on this Working Group and the Forum's discussion lists as set forth in the Bylaws.
 
@@ -167,13 +167,13 @@ Votes cast before a Voting Member's suspension is announced will stand.
    3.3 **Application Process**
 Applicants shall supply the information set out in Section 3.1(b) and follow the process set out in Section 3.1(c).
 
-Existing CA/Browser Forum Members seeking to participate in the TLSWG, in accordance with Bylaw 5.3.1(c), MUST formally declare their intent to participate in writing and provide the TLSWG Chair with this declaration and evidence that they meet the criteria set forth above. Such Applicants SHALL become Members of the TLSWG as determined by consensus during a TLSWG Meeting or Teleconference, or upon the request of any Member of the TLSWG, by a Ballot among Members of the TLSWG.
+Existing CA/Browser Forum Members seeking to participate in the EAWG, in accordance with Bylaw 5.3.1(c), MUST formally declare their intent to participate in writing and provide the EAWG Chair with this declaration and evidence that they meet the criteria set forth above. Such Applicants SHALL become Members of the EAWG as determined by consensus during a EAWG Meeting or Teleconference, or upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG.
 
-4. **Dependencies and Liaisons**
+1. **Dependencies and Liaisons**
 
    4.1 **CAB Forum Groups**
 
-The TLSWG will coordinate with, and seek guidance from, the following other CAB Forum Working Groups:
+The EAWG will coordinate with, and seek guidance from, the following other CAB Forum Working Groups:
 
 * Server Certificate Working Group, regarding the separation of Extended Key Usages, the transition of existing deployments, and the reuse of validation methods and certificate profile conventions.
 * S/MIME Certificate Working Group, regarding certificates that serve both client authentication and email protection purposes, and regarding the validation of natural person and legal entity identity.
@@ -182,7 +182,7 @@ The TLSWG will coordinate with, and seek guidance from, the following other CAB 
 
    4.2 **External Groups**
 
-The TLSWG may coordinate with, and seek guidance from, the following outside organizations:
+The EAWG may coordinate with, and seek guidance from, the following outside organizations:
 
 * IETF, in particular working groups concerned with TLS, PKIX successors, and certificate management protocols.
 * The WebTrust Task Force and the Accredited Conformity Assessment Bodies' Council (ACAB'c), regarding audit criteria applicable to non-browser TLS certificates.
@@ -192,28 +192,28 @@ The TLSWG may coordinate with, and seek guidance from, the following outside org
 
 5. **Participation**
 
-To be successful, the TLSWG is expected to have 10 or more active participants for its duration. The Working Group participants are expected to contribute an appropriate number of hours per week towards the Working Group’s activities.
+To be successful, the EAWG is expected to have 10 or more active participants for its duration. The Working Group participants are expected to contribute an appropriate number of hours per week towards the Working Group’s activities.
 
 6. **Communication**
 
-Most Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis. This group will conduct its work primarily on the TLSWG mailing list, which is available to the public. Information about the group will be available via the CAB Forum website.
+Most Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis. This group will conduct its work primarily on the EAWG mailing list, which is available to the public. Information about the group will be available via the CAB Forum website.
 
 7. **Decision Process**
 
-The TLSWG  will seek to make decisions when there is consensus and with due process. The expectation is that, typically, the Working Group Chair or other participant makes an initial proposal, which is then refined in discussion with the Working Group participants, and consensus emerges with little formal voting being required. However, if a decision is necessary for timely progress, but consensus is not achieved after careful consideration of the range of views presented, the Working Group Chair should put the question out for voting within the WG (using email and/or web-based survey techniques) and record a decision, along with any objections. The matter should then be considered resolved unless and until new information becomes available.
+The EAWG  will seek to make decisions when there is consensus and with due process. The expectation is that, typically, the Working Group Chair or other participant makes an initial proposal, which is then refined in discussion with the Working Group participants, and consensus emerges with little formal voting being required. However, if a decision is necessary for timely progress, but consensus is not achieved after careful consideration of the range of views presented, the Working Group Chair should put the question out for voting within the WG (using email and/or web-based survey techniques) and record a decision, along with any objections. The matter should then be considered resolved unless and until new information becomes available.
 
-Quorum is the average number of Member organizations (cumulative, regardless of class) that have participated in the previous three (3) TLSWG Meetings or Teleconferences, not counting subcommittee meetings thereof. No Ballots shall be adopted until at least three (3) meetings have occurred and quorum has been determined.
+Quorum is the average number of Member organizations (cumulative, regardless of class) that have participated in the previous three (3) EAWG Meetings or Teleconferences, not counting subcommittee meetings thereof. No Ballots shall be adopted until at least three (3) meetings have occurred and quorum has been determined.
 
 A Member admitted after a ballot has been proposed may not vote on that ballot.
 
-The TLSWG may establish subcommittees, by formal ballot, to address any of the TLSWG's business as specified in the ballot. Subcommittees are open to all TLSWG Members and must post all agendas and minutes on a public mail list.
+The EAWG may establish subcommittees, by formal ballot, to address any of the EAWG's business as specified in the ballot. Subcommittees are open to all EAWG Members and must post all agendas and minutes on a public mail list.
 
 1. **IPR Policy**
 
-The TLSWG is subject to the current version of the CAB Forum Intellectual Rights Policy (the “IPR Policy”).
+The EAWG is subject to the current version of the CAB Forum Intellectual Rights Policy (the “IPR Policy”).
 
 To promote the widest adoption of the CAB Forum Guidelines, CAB Forum seeks to issue Final Guidelines and Final Maintenance Guidelines that can be implemented, according to the IPR Policy, on a CAB Forum Royalty-Free License basis. For information about exclusion of Essential Claims, see Section 4 of the IPR Policy.
 
 9. **About this Charter**
 
-This TLSWG Charter has been created according to Section 5.3.1 of the Bylaws of the CAB Forum. In the event of a conflict between this charter and any provision in either the Bylaws or the IPR Policy, the provision in the Bylaws or IPR Policy shall take precedence.
+This EAWG Charter has been created according to Section 5.3.1 of the Bylaws of the CAB Forum. In the event of a conflict between this charter and any provision in either the Bylaws or the IPR Policy, the provision in the Bylaws or IPR Policy shall take precedence.
