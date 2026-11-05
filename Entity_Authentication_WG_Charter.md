@@ -71,7 +71,7 @@ Final Guidelines:
   * key management, certificate lifecycle, validity periods, and revocation and status services, taking account of relying party behaviour in entity authentication;
   * CA operational practices, physical and logical security, incident response, and disclosure, subject to coordination with other Forum CWGs to ensure consistency and avoid redundancy.
 
-   2.2 **Other Deliverables**
+### 2.2 **Other Deliverables**
 
 The EAWG may work on related deliverables and non-normative documents, such as:
 
