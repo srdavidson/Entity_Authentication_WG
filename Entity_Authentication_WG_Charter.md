@@ -169,7 +169,7 @@ Applicants shall supply the information set out in Section 3.1(b) and follow the
 
 Existing CA/Browser Forum Members seeking to participate in the EAWG, in accordance with Bylaw 5.3.1(c), MUST formally declare their intent to participate in writing and provide the EAWG Chair with this declaration and evidence that they meet the criteria set forth above. Such Applicants SHALL become Members of the EAWG as determined by consensus during a EAWG Meeting or Teleconference, or upon the request of any Member of the EAWG, by a Ballot among Members of the EAWG.
 
-1. **Dependencies and Liaisons**
+4. **Dependencies and Liaisons**
 
    4.1 **CAB Forum Groups**
 
@@ -208,7 +208,7 @@ A Member admitted after a ballot has been proposed may not vote on that ballot.
 
 The EAWG may establish subcommittees, by formal ballot, to address any of the EAWG's business as specified in the ballot. Subcommittees are open to all EAWG Members and must post all agendas and minutes on a public mail list.
 
-1. **IPR Policy**
+8. **IPR Policy**
 
 The EAWG is subject to the current version of the CAB Forum Intellectual Rights Policy (the “IPR Policy”).
 
