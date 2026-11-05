@@ -1,6 +1,6 @@
 # Entity Authentication Working Group Charter
 
-The **mission** of the Entity Authentication Working Group (the "EAWG") is to develop, adopt, and maintain requirements for the issuance and management of certificates that assert the `id-kp-clientAuth` (OID 1.3.6.1.5.5.7.3.2) and `id-kp-serverAuth` (OID: 1.3.6.1.5.5.7.3.1) Extended Key Usages for uses outside web browsers (such as TLS authentication, EAP-TLS, IKEv2, and adjacent smart card logon deployments, among others). The requirements are intended to create a common, independently auditable trust framework so that relying parties other than the Issuer or Subscriber can authenticate remote servers and clients on the basis of consistent issuance practices rather than bilateral arrangements.
+The **mission** of the Entity Authentication Working Group (the "EAWG") is to develop, adopt, and maintain requirements for the issuance and management of certificates that assert the `id-kp-clientAuth` (OID 1.3.6.1.5.5.7.3.2) and/or `id-kp-serverAuth` (OID: 1.3.6.1.5.5.7.3.1) Extended Key Usages for uses outside web browsers (such as TLS authentication, EAP-TLS, IKEv2, and adjacent smart card logon deployments, among others). The requirements are intended to create a common, independently auditable trust framework so that relying parties other than the Issuer or Subscriber can authenticate remote servers and clients on the basis of consistent issuance practices rather than bilateral arrangements.
 
 **End date**: The EAWG is chartered indefinitely until it is dissolved as specified in Bylaw 5.3.2(3).
 
@@ -30,7 +30,6 @@ The Working Group will leverage existing work rather than duplicate it. Validati
 
 * Publication of a use case and trust model report that identifies the authentication use cases requiring a shared trust framework, and the relying party communities that would consume certificates issued under it.
 * Prepare a ballot to create EAWG Baseline Requirement guidelines.
-* Work with the Forum to have guidelines for the EAWG be approved and adopted.
 
 ### 1.3 **Minimum Requirements**
 
@@ -146,9 +145,8 @@ Members may resign from the Working Group at any time. Resignation does not prev
 (a) Certificate Consumer: A Certificate Consumer Member's membership may be suspended if any of the following become true:
 
    * it stops providing support for its qualifying product or service;
-   * its qualifying product or service ceases to authenticate remote parties using Certificates asserting `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth`;
-   * it ceases to maintain or publish a conforming non-browser entity authentication Trust Program, or that program ceases to accept any CA with which the Member is not Affiliated;
-   * its trust decisions cease to be made independently within the meaning of Section 3.1.
+   * its qualifying product or service ceases to authenticate remote parties using Certificates asserting `id-kp-clientAuth` and/or non-browser `id-kp-serverAuth`; and
+   * it ceases to maintain or publish a conforming non-browser entity authentication Trust Program, or that program ceases to accept any CA with which the Member is not Affiliated.
 
 (b) Certificate Issuer: A Certificate Issuer's membership may be suspended if any of the following become true:
 
@@ -179,7 +177,7 @@ The EAWG will coordinate with, and seek guidance from, the following other CAB F
 
 * Server Certificate Working Group, regarding the separation of Extended Key Usages, the transition of existing deployments, and the reuse of validation methods and certificate profile conventions.
 * S/MIME Certificate Working Group, regarding certificates that serve both client authentication and email protection purposes, and regarding the validation of natural person and legal entity identity.
-* Network Security Working Group, regarding CA operational and network security requirements.
+* Network Security Working Group, regarding CA operational and network security requirements. The NetSec WG charter may require a coordinated amendment if the NCSSRs are to cover EAWG guidelines.
 * Forum Infrastructure Subcommittee, regarding mailing lists, wiki, and publication of documents.
 
 ### 4.2 **External Groups**
